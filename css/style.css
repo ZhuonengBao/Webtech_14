@@ -1,0 +1,969 @@
+body {
+    background-color: #F5F5ED;
+    margin: 0;
+    font-family: 'Inter';
+}
+
+body button, body a {
+    cursor: pointer;
+}
+
+
+
+
+/*Navigation Bar & Footer CSS*/
+.navbar {
+    overflow: hidden;
+    height: 60px;
+    background-color: #E6E6E3;
+}
+
+.navbar a {
+    display: block;
+    float: left;
+    padding: 18px 16px;
+
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    color: #A23339;
+    text-decoration: underline;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+    }
+
+    .navbar a.icon {
+        display: block;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0;
+
+    color: rgb(0, 0, 0);
+    padding: 18px 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 3px;
+    background-color: #E6E6E3;
+    min-width: 160px;
+}
+
+.second-drp {
+    margin-top: -1px;
+}
+
+.dropdown-content a {
+    display: block;
+    float: none;
+    
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-menu {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown-menu .dropbtn {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.dropdown-menu-content a {
+    float: none;
+    display: block;
+
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #E6E6E3;
+    
+    align-items: center;
+    color: black;
+    text-align: center;
+}
+
+
+
+
+
+/*Homepage CSS*/
+.hero-section {
+    display: flex;
+    height: 376px;
+    width: 100%;
+    margin: 0;
+
+    background-image: url("../images/homeepage-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-search {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.hero-search-text {
+    /* Read Reviews. Write Reviews. Find the course you like. */
+    max-width: 480px;
+    height: 80px;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 50px;
+    /* or 156% */
+
+    color: #FFFFFF;
+}
+
+.hero-search-box {
+    display: flex;
+    flex-direction: row;
+    
+    max-width: 468px;
+    margin-top: 10%;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.faculty-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 376px;
+    margin: 0;
+    
+    background: #D8D8D8;
+    align-items: center;
+}
+
+.faculty-text {
+    /* Choose faculty */
+    width: 200px;
+    height: 65px;
+    justify-content: center;
+    top: 15px;
+
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+    /* or 208% */
+
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.faculty-selection {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+    margin-left: 5%;
+    margin-right: 5%;
+    column-gap: 2%;
+}
+
+.faculty-button {
+    width: 280px;
+    height: 66px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+#law {
+    width: 36px;
+    height: 33px;
+    display: inline-block;
+    background-image: url("../images/law.png") no-repeat;
+}
+
+.review-section {
+    /* Homepage Review-section */
+
+    width: 100%;
+    min-height: 530px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #F5F5ED;
+}
+
+.recent-review-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.review-header {
+    /* Recent reviews */
+    width: 192px;
+    height: 28px;
+    margin-top: 45px;
+
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.recent-review {
+    /* Review1 */
+    width: 300px;
+    height: 300px;
+    top: 139px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    background: #D9D9D9;
+    border-radius: 30px;
+}
+
+.interest-section {
+    width: 100%;
+    min-height: 430px;
+    margin: 0;
+    top: 1286px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    background: #454545;
+}
+
+.motivation-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+.motivation-header {
+    /* Let your voice be heard */
+
+    width: 319px;
+    height: 130px;
+
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+    /* or 125% */
+
+
+    position: relative;
+
+    color: #FFFFFF;
+}
+
+.motivation-text {
+    /* A college lecture review site can help students find the best lectures, stay informed about upcoming lectures, and get feedback from other students. */
+
+    max-width: 382px;
+    min-height: 95px;
+
+
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.motivation-button {
+    /* AbouUs Button */
+    width: 135px;
+    height: 45px;
+
+    display: block;
+    text-align: center;
+
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+
+
+    color: #FFFFFF;
+
+    background: #A0ACA0;
+    border-radius: 30px;
+}
+
+.motivation-star {
+    /* Star Icon */
+
+    width: 55px;
+    height: 50px;
+
+    position: absolute;
+    top: 41%;
+    left: 58%;
+
+
+    background-image: url("../images/motivation-star.png");
+}
+
+.ratings-tip-container {
+    /* View Toprated Course */
+    width: 390px;
+    height: 370px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    position: relative;
+
+    background: #A0ACA0;
+    border-radius: 25px;
+}
+
+.ratings-tip-text {
+    /* View all of our ratings. Top rated courses. Top lectures. */
+
+    width: 302px;
+    height: 205px;
+
+    position: absolute;
+    top: 15%;
+    left: 10%;
+
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+    /* or 156% */
+
+
+    color: #000000;
+}
+
+.ratings-tip-button {
+    /* View Button */
+    box-sizing: border-box;
+
+    width: 135px;
+    height: 45px;
+
+    position: absolute;
+    top: 78%;
+    left: 10%;
+
+    display: block;
+    text-align: center;
+
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+
+    border: 4px solid #000000;
+    border-radius: 30px;
+}
+
+
+
+/*Course-Search CSS*/
+.browse-container p,
+.search-container p {
+    margin: 0;
+    padding: 0;
+
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.middle {
+    margin: 0;
+    padding: 0;
+    height: 700px;
+    text-align: left;
+}
+
+.search-container {
+    padding: 0;
+    width: 980px;
+    height: 100px;
+    margin-left: 160px;
+    margin-top: 50px;
+}
+
+.search-text {
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    width: 980px;
+    height: 50px;
+    left: 160px;
+    top: 140px;
+}
+
+.search-bar {
+    position: absolute;
+    width: 980px;
+    height: 50px;
+    left: 160px;
+    top: 190px;
+
+    background: #A0ACA0;
+    border-radius: 15px;
+}
+
+.search-bar form {
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+.search-bar form input[type=text] {
+    font-size: 15px;
+    border-style: none;
+    width: 900px;
+
+    color: black;
+    background-color: #A0ACA0;
+    border-bottom: black solid;
+}
+
+.search-bar form input:focus {
+    outline: none;
+    border-bottom: black solid;
+}
+
+.search-bar form button {
+    font-size: 24px;
+    border-style: none;
+    background-color: #A0ACA0;
+}
+
+.browse-container {
+    width: 980px;
+    height: 515px;
+
+    padding: 0;
+    margin-left: 160px;
+    margin-top: 30px;
+}
+
+.browse-text {
+    position: absolute;
+    width: 980px;
+    height: 50px;
+    left: 160px;
+    top: 280px;
+}
+
+.browse-menu {
+    background-color: #E6E6E3;
+    position: absolute;
+    width: 980px;
+    height: 460px;
+    left: 160px;
+    top: 330px;
+}
+
+.faculty {
+    margin-top: 35px;
+    margin-left: 30px;
+    width: 265px;
+    height: 375px;
+}
+
+.faculty button {
+    display: block;
+    padding: 15px 15px;
+    width: 265px;
+    height: 45px;
+
+    border-style: none;
+    background-color: #E6E6E3;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    text-align: left;
+    text-decoration: none;
+}
+
+.faculty button:hover {
+    background-color: #ACACAC;
+}
+
+.study {
+    margin-top: -375px;
+    margin-left: 295px;
+    width: 170px;
+    height: 375px;
+    background-color: #E6E6E3;
+}
+
+.study button {
+    display: block;
+    width: 170px;
+    height: 45px;
+    text-align: left;
+
+    border-style: none;
+    background-color: #F8F8F8;
+
+    padding: 10px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.study button:hover {
+    background-color: #ACACAC;
+}
+
+.course {
+    margin-top: -375px;
+    margin-left: 465px;
+    width: 455px;
+    height: 375px;
+    background-color: #E6E6E3;
+}
+
+#years {
+    padding-left: 10px;
+    border-style: none;
+    background-color: #ACACAC;
+    width: 455px;
+    height: 45px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+#years option {
+    border: none;
+    background-color: #F8F8F8;
+}
+
+select:focus {
+    outline: none;
+}
+
+.courses {
+    width: 455px;
+    height: 45px;
+    margin-top: 5px;
+}
+
+.courses a {
+    text-decoration: none;
+    display: block;
+    padding: 0px 10px;
+    font-style: normal;
+    font-size: 15px;
+    color: black;
+}
+
+.courses a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*Login CSS*/
+.wrapper {
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: min();
+    width: 400px;
+    text-align: center;
+    background: #E6E6E3;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.wrapper header {
+    font-size: 50px;
+}
+
+.wrapper form {
+    margin: 40px 0px;
+}
+
+.wrapper form input {
+    height: 40px;
+    width: 80%;
+    margin: 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+.input-text input {
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid darkgrey;
+}
+
+.login-page-btn button {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    color: black;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 60%;
+}
+
+.password-link {
+    margin-top: 10px;
+}
+
+
+
+/*Register CSS*/
+.wrapper2 {
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: auto;
+    width: 400px;
+    text-align: center;
+    background: #E6E6E3;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.wrapper2 header {
+    font-size: 50px;
+}
+
+.wrapper2 form {
+    margin: 40px 0px;
+}
+
+.wrapper2 form input {
+    height: 40px;
+    width: 80%;
+    margin: 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+.input-text2 input {
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid darkgrey;
+}
+
+.register-btn button {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 60%;
+}
+
+.login-link {
+    margin-top: 10px;
+}
+
+
+
+/*ForgotPassword CSS*/
+.wrapper3 {
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 400px;
+    text-align: center;
+    background: #E6E6E3;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.wrapper3 header {
+    font-size: 40px;
+}
+
+.wrapper3 form {
+    margin: 40px 0px;
+}
+
+.wrapper3 form input {
+    height: 40px;
+    width: 80%;
+    margin: 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+.input-text3 input {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid darkgrey;
+}
+
+.reset-btn button {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 60%;
+}
+
+
+
+/* My Account CSS */
+:root {
+    /* fonts */
+    --font-inter: 'inter';
+
+    /* font sizes */
+    --font-size-base: 20px;
+
+    /* Colors */
+    --color-white: #fff;
+    --color-gray-100: #e6e6e3;
+    --color-black: #000;
+
+    /* Paddings */
+    --padding-md: 8px;
+}
+
+.account-settings {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 84.5px);
+    font-size: var(--font-size-base);
+
+    color: var(--color-black);
+    text-align: center;
+
+    border: 0;
+    padding: 0;
+    background-color: var(--color-white);
+    position: absolute;
+    top: calc(50% - 36.5px);
+    left: calc(50% + 182px);
+    width: 227px;
+    height: 72px;
+}
+
+.my-reviews1 {
+    display: flex;
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 59.5px);
+    font-size: var(--font-size-base);
+
+
+    color: var(--color-black);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 121px;
+}
+
+.my-courses,
+.my-reviews {
+    border: 0;
+    background-color: var(--color-white);
+    position: absolute;
+    top: calc(50% - 36.5px);
+    left: calc(50% - 114px);
+    width: 227px;
+    height: 72px;
+}
+
+.my-courses {
+    left: calc(50% - 409px);
+}
+
+.profile-picture,
+.user-actions {
+    position: absolute;
+    top: 111px;
+    overflow: hidden;
+}
+
+.user-actions {
+    width: calc(100% - 966px);
+    right: 385px;
+    left: 581px;
+    background-color: var(--color-gray-100);
+    height: 129px;
+}
+
+.profile-picture {
+    left: 129px;
+    border: 1px solid var(--color-black);
+    box-sizing: border-box;
+    width: 328px;
+    height: 302px;
+}
+
+.firstname-lastname {
+    position: absolute;
+    top: 64px;
+    left: 131px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 326px;
+    height: 47px;
+}
+
+.coursepage-body {
+    text-decoration: none;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    height: 920px;
+    color: inherit;
+}
+
+.my-account {
+    background-color: #f5f5ed;
+    width: 100%;
+    height: 1080px;
+    overflow: hidden;
+    text-align: center;
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
